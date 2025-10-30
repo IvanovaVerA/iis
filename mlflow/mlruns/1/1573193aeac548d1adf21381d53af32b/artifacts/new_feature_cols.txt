@@ -1,0 +1,35 @@
+num__battery_power
+num__blue
+num__clock_speed
+num__dual_sim
+num__fc
+num__four_g
+num__int_memory
+num__m_dep
+num__mobile_wt
+num__n_cores
+num__pc
+num__px_height
+num__px_width
+num__ram
+num__sc_h
+num__sc_w
+num__talk_time
+num__three_g
+num__touch_screen
+num__wifi
+num__total_pixels
+num__screen_size
+poly__1
+poly__battery_power
+poly__ram
+poly__px_height
+poly__battery_power^2
+poly__battery_power ram
+poly__battery_power px_height
+poly__ram^2
+poly__ram px_height
+poly__px_height^2
+binned_features__int_memory
+binned_features__mobile_wt
+binned_features__clock_speed

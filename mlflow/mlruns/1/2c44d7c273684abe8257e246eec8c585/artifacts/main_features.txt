@@ -1,0 +1,2 @@
+5,6,8,12,13,18,20,22,23,24,27,28,30,34
+num__four_g,num__int_memory,num__mobile_wt,num__px_width,num__ram,num__touch_screen,num__total_pixels,poly__1,poly__battery_power,poly__ram,poly__battery_power ram,poly__battery_power px_height,poly__ram px_height,binned_features__clock_speed
