@@ -12,10 +12,10 @@ mlflow.set_tracking_uri(tracking_uri)
 mlflow.set_registry_uri(registry_uri)   
 
 
-RUN_NAME = '8148290552ec4370b30ce5b3a589bc2f'
+RUN_NAME = '01fd4e9e356646e78822ebac40d37d61'
 path = f"runs:/{RUN_NAME}/models"
 loaded_model = mlflow.sklearn.load_model(path)
-print(loaded_model)
+
 
 with open('model.pkl', 'wb+') as f:
     pkl.dump(loaded_model, f)

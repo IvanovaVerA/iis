@@ -1,9 +1,20 @@
 from fastapi import FastAPI
 from api_handler import FastAPIHandler
+from prometheus_fastapi_instrumentator import Instrumentator
+from prometheus_client import Histogram, Gauge, Counter, Summary
+
 
 app = FastAPI()
 app.handler = FastAPIHandler()
 
+instrumentator = Instrumentator()
+instrumentator.instrument(app).expose(app)
+
+prediction_metric = Histogram(
+    'prediction_metric_histogram',
+    'histogram of predicted devices',
+    buckets=(1,2,3,4)
+)
 
 @app.get('/')
 def root_dir():
@@ -13,6 +24,7 @@ def root_dir():
 def make_prediction(item_id: int, item_features: dict):
     prediction = app.handler.predict(item_features)[0]
 
+    prediction_metric.observe(prediction)
 
     return ({
              'price': str(prediction),

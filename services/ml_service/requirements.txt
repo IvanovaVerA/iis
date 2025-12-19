@@ -1,2 +1,5 @@
 prometheus-fastapi-instrumentator==7.1.0
 fastapi==0.120.2
+uvicorn==0.38.0
+pandas==2.3.2
+scikit-learn==1.7.2
